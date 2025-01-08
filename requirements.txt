@@ -1,1 +1,2 @@
 streamlit
+pydantic-ai==0.0.12
