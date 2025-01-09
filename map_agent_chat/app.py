@@ -88,7 +88,6 @@ def main():
         with st.sidebar:
             print("show map")
             st_folium(st.session_state.map, width=500)
-    st.sidebar.write(st.session_state.history)
 
     
 if __name__ == "__main__":
