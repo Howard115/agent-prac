@@ -86,7 +86,6 @@ def main():
     agent_chat.run()
     if st.session_state.map:
         with st.sidebar:
-            print("show map")
             st_folium(st.session_state.map, width=500)
 
     
