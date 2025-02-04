@@ -1,7 +1,6 @@
 import streamlit as st
 import folium
 from geopy.geocoders import Nominatim
-from streamlit_folium import st_folium
 
 
 def create_location_map(
