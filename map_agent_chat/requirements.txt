@@ -1,5 +1,5 @@
 streamlit
-pydantic-ai==0.0.12
+pydantic-ai
 streamlit-folium
 folium
 geopy
