@@ -9,7 +9,7 @@ from create_map import create_location_map
 def create_agent_1():
     agent_1 = Agent(
             "openai:gpt-4o-mini",
-            result_type=LocationMapResponse,
+            output_type=LocationMapResponse,
         )
     
     @agent_1.system_prompt
@@ -25,7 +25,7 @@ def create_agent_1():
             """
         )
     
-    @agent_1.result_validator
+    @agent_1.output_validator
     async def validate_result(result: LocationMapResponse):
         try:
             if result.location:
@@ -79,11 +79,11 @@ class AgentChat:
         
         # Store response as ModelResponse with TextPart
         response_msg = ModelResponse(
-            parts=[TextPart(content=response.data)],
+            parts=[TextPart(content=response.output)],
             model_name="openai:gpt-4o-mini"
         )
         st.session_state.history.append(response_msg)
-        st.chat_message("assistant").markdown(response.data)
+        st.chat_message("assistant").markdown(response.output)
 
     def update_chat(self, prompt: str):
         asyncio.run(self.update_chat_async(prompt))
