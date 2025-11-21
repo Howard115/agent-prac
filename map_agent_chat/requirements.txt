@@ -1,5 +1,0 @@
-streamlit
-pydantic-ai
-streamlit-folium
-folium
-geopy
